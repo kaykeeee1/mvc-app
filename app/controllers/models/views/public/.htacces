@@ -16,3 +16,4 @@ RewriteCond %{REQUEST_FILENAME} !-d
 #O parametro capturado da URL será passado como URL sera passado como ?Url ao script index.php
 RewriteRule  ^(.+)$ index.php?url=1 [QSA,L]
 
+
