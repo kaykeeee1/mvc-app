@@ -5,7 +5,7 @@ class controller{
         //requerer o arquivo modelo
         require_once '../app/models/'.$model.'.php';
         //retorna uma nova instancia do modelo 
-        reurn new $model();
+        return new $model();
     }
     //metodo para carregar a view
 
