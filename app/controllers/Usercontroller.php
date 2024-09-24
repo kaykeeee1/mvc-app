@@ -9,7 +9,7 @@ $userModel = $this->models("user");
 //obtem a lista de usuarios do modelo
 $users = $userModel->getUsers();
 //carrega a view 'users' passando os dados dos usuarios
-$this->view('users', ['users'=>$users]);
+$this->view('userView', ['users'=>$users]);
     } 
 
 }
