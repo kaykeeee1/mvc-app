@@ -2,7 +2,7 @@
 
 class App {
     // Definir controlador e método padrão
-    protected $controller = 'UserController';
+    protected $controller = 'Usercontroller';
     protected $method = 'index';
     protected $params = [];
 
