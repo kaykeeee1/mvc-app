@@ -1,4 +1,5 @@
 {
+    "_comment": "para garantir o carregamento das classes",
 "autoload": {
     "psr-4": {
         "app\\":"app/"
