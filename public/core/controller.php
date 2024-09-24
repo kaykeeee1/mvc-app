@@ -1,5 +1,5 @@
 <?php
-class controller{
+class controller {
     //metodo para carregar o modelo 
     public function models($model){
         //requerer o arquivo modelo

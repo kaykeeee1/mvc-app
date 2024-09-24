@@ -8,21 +8,9 @@ class App {
 
     public function __construct() {
         // Obtem a URL e a transforma em um array 
-        $url = $this->parse_url();
+        $url = $this->parse_url();       
 
         // Verifica se o controlador existe no diretório de controladores
-        if (file_exists('../app/controllers/' . $url[0] . '.php')) {
-            // Remove o primeiro elemento do array (controlador) para continuar o processamento
-            unset($url[0]);
-        }
-
-        // Requerer o arquivo controlador
-        require_once '../app/controllers/' . $this->controller . '.php';
-
-        // Instanciando o controlador
-        $this->controller = new $this->controller;
-
-        // Verificar se existe o método (ação) no controlador a ser chamado
         if (isset($url[0]) && file_exists('../app/controllers/' . $url[0] . '.php')) {
             // Define o controlador a partir da URL
             $this->controller = $url[0];
@@ -30,8 +18,22 @@ class App {
             unset($url[0]);
         }
 
+        // Requerer o arquivo controlador
+        require_once '../app/controllers/'.$this->controller . '.php';
+
+        // Instanciando o controlador
+        $this->controller = new $this->controller;
+
+        // Verificar se existe o método (ação) no controlador a ser chamado
+        if (isset($url[1]) && file_exists('../app/controllers/' . $url[1] . '.php')) {
+            // Define o controlador a partir da URL
+            $this->controller = $url[1];
+            // Remove o primeiro elemento do array (controlador) para continuar processando
+            unset($url[1]);
+        }
+
         // Requer o arquivo do controlador
-        require_once '../app/controllers/' . $this->controller . '.php';
+        require_once '../app/controllers/Usercontroller.php';
 
         // Instancia o controlador
         $this->controller = new $this->controller;

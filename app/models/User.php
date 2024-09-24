@@ -6,7 +6,8 @@ class user{
     public function getUsers(){
         // Em um caso real, voce teria a conexão com o banco de dados
         return[
-            ['id'=>1,'nome'=>'joão','email'=>'joão@email.com'], ['id'=>2, 'nome'=> 'maria','email'=>'maria@email.com'],
+            ['id'=>1,'nome'=>'joão','email'=>'joão@email.com'], 
+            ['id'=>2, 'nome'=> 'maria','email'=>'maria@email.com'],
         ];
     }
 }
