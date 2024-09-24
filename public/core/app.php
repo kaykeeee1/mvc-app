@@ -16,7 +16,7 @@ class App {
             $this->controller = $url[0];
             // Remove o primeiro elemento do array (controlador) para continuar processando
             unset($url[0]);
-        }
+        } 
 
         // Requerer o arquivo controlador
         require_once '../app/controllers/'.$this->controller . '.php';
